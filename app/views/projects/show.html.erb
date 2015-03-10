@@ -26,3 +26,12 @@
     </li>
   </ul>
 </div>
+
+<ul id="tickets">
+  <% @project.tickets.each do |ticket| %>
+    <li>
+      #<%= ticket.id %> &emdash;
+      <%= link_to ticket.title, [@project, ticket] %>
+    </li>
+  <% end %>
+</ul>
